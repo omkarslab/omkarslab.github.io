@@ -13,9 +13,9 @@ categories:
 ---
 Understanding that everything on Ethereum is public and permanent, caution needs to be maintained while deploying code in form of Smart Contracts. There is of course an exception to this permanence, which comes at the cost of a community initiated hard-fork. In the history of Ethereum, this has [happened once](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/) with ~$70 million at stake due to a buggy contract. Considering what is at stake, here are a few considerations before deploying your smart contract.
 
-**Routing contracts****
-  
-** Excluding some very exceptional cases, your contracts will most likely need an upgrade. While you cannot update code for an already deployed contract, you can very well upload a newer version of a contract. If it is not just your Dapp that interacts with the contracts, you need a way to ensure that your contract is accessible at the same address to avoid confusion. This is where Routing Contracts help. You can design contracts like the one below to simply act a pointer to your final contract. You can utilize _delegatecall_ to delegate the operation to another contract and allow state modifications. While upgrading the contract code, you can then simply update the routing to point to the new address.
+**Routing contracts**
+
+Excluding some very exceptional cases, your contracts will most likely need an upgrade. While you cannot update code for an already deployed contract, you can very well upload a newer version of a contract. If it is not just your Dapp that interacts with the contracts, you need a way to ensure that your contract is accessible at the same address to avoid confusion. This is where Routing Contracts help. You can design contracts like the one below to simply act a pointer to your final contract. You can utilize _delegatecall_ to delegate the operation to another contract and allow state modifications. While upgrading the contract code, you can then simply update the routing to point to the new address.
 
     
     contract Router {
@@ -41,9 +41,9 @@ Understanding that everything on Ethereum is public and permanent, caution needs
     }
     
 
-**Overrides
-  
-** It is ideal to set override flags that are checked before executing high stake transactions. In case a vulnerability is discovered post deployment, these override flags can be set to block any transactions from being executed.
+**Overrides** 
+
+It is ideal to set override flags that are checked before executing high stake transactions. In case a vulnerability is discovered post deployment, these override flags can be set to block any transactions from being executed.
 
     
     contract Vote {
@@ -74,9 +74,9 @@ Understanding that everything on Ethereum is public and permanent, caution needs
     }
     
 
-**Block lock
+**Block lock**
   
-** A single contract is bound to receive concurrent transactions, and as a result frequent state changes. Certain states like ownership or override flags if changed frequently can lead to unintended transactions by users. In such cases block locks can be implemented to block changes to these states for a preset block height.
+A single contract is bound to receive concurrent transactions, and as a result frequent state changes. Certain states like ownership or override flags if changed frequently can lead to unintended transactions by users. In such cases block locks can be implemented to block changes to these states for a preset block height.
 
     
     contract Donation {
@@ -109,9 +109,9 @@ Understanding that everything on Ethereum is public and permanent, caution needs
 
 Users can then ensure that the state they are referring to is at least X block height old, to be sure that no concurrent transactions will drop in leading to unintended transactions.
 
-**Suicide
+**Suicide**
   
-** For contracts that are intended to be temporary, Ethereum provides an OPCODE that acts as a kill switch (suicide) to destroy the contract and free up space on the blockchain. All Ether owned by the contract is transferred to the address passed to this OPCODE. Solidity example below.
+For contracts that are intended to be temporary, Ethereum provides an OPCODE that acts as a kill switch (suicide) to destroy the contract and free up space on the blockchain. All Ether owned by the contract is transferred to the address passed to this OPCODE. Solidity example below.
 
     
     function KillContract() IsOwner() returns (uint) {

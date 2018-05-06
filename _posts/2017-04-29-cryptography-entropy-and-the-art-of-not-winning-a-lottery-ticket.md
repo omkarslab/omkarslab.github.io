@@ -34,7 +34,7 @@ Though this is a large number, without a solid background of mathematics it is s
 
 Apparently, matter all around us acts the way it does because entropy dictates this behavior; also via probability. Entropy is the simplest form is a measurement of disorder. I’ll let the TED-Ed by Jeff Philips explain it in detail.
 
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YM-uykVfq_E/0.jpg)](https://www.youtube.com/watch?v=YM-uykVfq_E)
 
 Now if you think of the probability of stumbling into a key twice; the probability of it really happening is close to the probability of a steady glass of water heating up while next to ice. Or as one <a href="https://bitcoin.stackexchange.com/a/7732/47442" target="_blank">Bitcoin Stack exchange user explains</a> – “_the odds of your computer burning down and turning into a million-dollar lottery ticket are better than you stumbling into a duplicate address_”. Quite literally.
 
