@@ -3,11 +3,11 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email: zourenyuan@gmail.com
-description: A simple and awesome blog theme powered by jekyll.
-url: https://renyuanz.github.io/leonids # the base hostname & protocol for your site
-keywords: ["Programming", "PHP", "Ruby"]
+title: Omkar's Lab
+email: om.kar.kha.ir@gmail.com
+description: Notes. Thoughts. Experiments and everything else.
+url: https://omkarslab.github.io # the base hostname & protocol for your site
+keywords: ["Programming", "Computing", "Cryptography","Networks"]
 
 #
 ###################################
@@ -33,24 +33,24 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
+  name: Omkar Khair
   avatar: leonids-logo.png
-  job: "PHP & Ruby Developer"
-  bio: "A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France."
-  email: zourenyuan@gmail.com
-  disqus-shortname: renyuanzblog
-  twitter: renyuan814 #username
+  job: "Technology Evangelist / Consultant"
+  bio: "Polyglot Developer working at Rapid Circle. I like to build, break and build again."
+  email: om.kar.kha.ir@gmail.com
+  disqus-shortname: omkarslab
+  twitter: omtalk #username
   facebook: #username
   google:
     plus: #username
-    analytics: UA-62251910-2
+    analytics: 
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: renyuanz #username
+  github: omkarkhair #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: renyuan-zou-69b7038a #username
+  linkedin:  #username
   xing: #username
   instagram: #username
   lastfm: #username
