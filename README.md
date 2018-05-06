@@ -1,131 +1,95 @@
-## About
-Monochrome is a minimal, responsive, ready to use Jekyll theme for blogging. [Demo](https://dyutibarma.github.io/monochrome/)
-(Built on top of Emerald Jekyll theme)
+![](_assets/images/documentation/chalk-intro@2x.png)
 
-## Features
+Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
 
-- Completely responsive and mobile first
-- Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
-- SEO title/description integration
-- Sitemap ready
-- Pagination support
-- Mobile friendly navigation menu
-- Easy customization for header, footer, navigation links, colors, favicon etc
-- Default Monochrome Color Palette - black, white, greys
-- About page
-- 404 page
-- ..and a lot more
+## Overview
 
-## Install/Setup Jekyll
+Features:
+  - About page.
+  - Automatic RSS feed.
+  - Automatic sitemap.
+  - Automatic time to read post indicator.
+  - Cross browser support (supports all modern browsers).
+  - Custom 404 page.
+  - Custom code highlighting.
+  - Customizable pagination.
+  - Dark and Light theme.
+  - Easy setup and deploying.
+  - Enlarge images on click.
+  - Filter on tags.
+  - Frequently updated with new versions.
+  - Many social media links supported.
+  - Media embed for videos.
+  - PageSpeed optimized.
+  - Proper sharing links for posts on Facebook, Twitter and Google Plus.
+  - SEO optimized.
+  - Support for local fonts.
+  - Support for emoji's.
 
-(Skip if you already have Jekyll 2.2)
+Integrations
+  - [Disqus](https://disqus.com/)
+  - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [SVG Icons](https://icomoon.io/)
 
-1. Make sure Ruby 2.2 is installed 
-```
-sudo apt-get install ruby2.2
-sudo apt-get install ruby2.2-dev
-```
-2. Install bundle: `sudo gem install bundler`
-3. Install jekyll: `sudo gem install jekyll`
+Used tools
+  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [Circle CI](https://circleci.com/)
+  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
+  - [Jekyll](https://jekyllrb.com/)
+  - [Jekyll Assets](https://github.com/jekyll/jekyll-assets)
+  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
+  - [Kickster](https://kickster.nielsenramon.com/)
+  - [Zooming](https://github.com/kingdido999/zooming/)
+  - [Retina.js](https://imulus.github.io/retinajs/)
+  - [STACSS](https://stacss.nielsenramon.com/)
+  - [Yarn](https://yarnpkg.com)
 
-### Resources
+## Usage
 
-- We found the jekyll tutorials on youtube very quick and useful to get started
-- [Jekyll documentation](http://jekyllrb.com)   
+### Installation
 
+If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](https://brew.sh/) installed):
 
-## Install Monochrome dependencies
+    brew install ruby
+    brew install npm
 
-```
-sudo gem install jekyll-paginate
-sudo gem install jekyll-sitemap
+On windows, install Ruby and Node with the installers found here:
 
-```
+  - [Ruby](https://rubyinstaller.org/)
+  - [Node.js](https://nodejs.org/en/download/)
 
-## Get Started with Monochrome
+Next setup your environment:
 
-### Option 1 
+    npm run setup
 
-- Fork this repository
-- (Optional) Change the 'baseurl' value in the 'config.yml' file, from '/blog' to your preferred directory/project name (example '/xyz' or '/' to install in root)
-- Clone the forked repository to your local machine to make changes
-- Run 'jekyll serve' and open browser to 'localhost:4000/blog/' to see your changes
-- (Optional) Host with github pages
+### Development
 
-Note: If you fork the repository, your version of the repository will not be searchable. If you want searchability, we suggest you use the next option.
+Run Jekyll:
 
+    npm run local
 
-### Option 2
+## Deploy to GitHub Pages
 
-- Simply download the .zip folder from the repository github page
-- Extract the contents from the .zip folder into your local folder
-- cd into monochrome/
-- Run 'jekyll serve' and open browser to 'localhost:4000/blog/' to see your changes
-- Create a repository in github and push the files
-- (Optional) Host with github pages
+Before you deploy, commit your changes to any working branch except the `gh-pages` one and run the following command:
 
-## Write a Post
+    npm run publish
 
-- cd into  ``_posts/``
-- create new file with format yyyy-mm-dd-title-of-post.md
-- add title/description (refer any of the test posts)
-- add markdown and save
+**Important note**: Chalk does not support the standard way of Jekyll hosting on GitHub Pages. You need to deploy your working branch (can be any branch, for xxx.github.io users: use another branch than `master`) with the `npm run publish` command. Reason for this is because Chalk uses Jekyll plugins that aren't supported by GitHub pages. The `npm run publish` command will automatically build the entire project, then push it to the `gh-pages` branch of your repo. The script creates that branch for you so no need to create it yourself. Also, if you are developing a **project site**, you must set the `baseurl` in `_config.yml` to the name of your repository.
 
+You can find more info on how to use the `gh-pages` branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
 
-## Customization Options
-
-You can customize this layout using instructions below. 
-
-### Header/Footer/Navigation
-
-Set a custom header tag by setting the related option in the ``_config.yml`` file to "true". Then insert your custom code into the ``header-custom.html`` file.
-In the same way, you can customize the footer of the navigation menu, by setting to "true" the related option and put your code into the ``nav-footer-custom.html`` file.
-Moreover select a reverse option that allows to move the navigation menu to the left side, by setting it to "true".
-
-### Colors
-
-The basic colors are set into the ``base.scss`` file:
-- $background-color: used for background and links in the navigation menu
-- $text-color: used for text and title in posts and pages 
-- $text-light-color: used for text lighter than text-color
-- $text-dark-color: used for text darker than text-color
-
-To customize the colors, just set the values in HEX, RGB (or RGBa) or any other format accepted by CSS.
-
-### Navigation menu
-
-The links inside the navigation menu are autogenerated from pages having the layout set to ``page``.
-You can set custom links, by putting in the ``<a>`` tag into the ``link.html`` file.
-
-### Branch
-There are two branches: 
-- ``master``: is for development.
-- ``gh-pages``: is only for demo site.  
-
-### Baseurl
-
-You can change the 'baseurl' value in the 'config.yml' file, from '/monochrome' to your preferred directory/project name (example '/xyz' or '/' to install in root)
-
-### Typography
-
-To maintain the vertical rhythm, it has been applied a **Typographic scale** as a modular scale, with a baseline set to 24px. To maintain this rhythm you need to insert elements like image, video or other contents with a 24px (or multiple) height as refer.
-
-## Resources
-
-- We found the jekyll tutorials on youtube very quick and useful to get started
-- [Jekyll documentation](http://jekyllrb.com)   
-
-## Todo
-
-- Google Analytics integration
-- Footer to stick to bottom even when content is less
-
-## Author
-
-### TheReviewIndex
-
-- Dyuti Barma
-- Web site: [Review Aggregation and Summary Site for India - TheReviewIndex.com](https://thereviewindex.com)
+[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
 
 ## License
-Released under [MIT License](license.md).
+
+MIT License
+
+## Contributing
+
+1. Fork it (https://github.com/[my-github-username]/chalk/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
