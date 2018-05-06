@@ -1,4 +1,4 @@
-- name: leonids
-  descr: "Bacon ipsum dolor sit amet doner meatball jowl short ribs, chicken prosciutto salami frankfurter. Pig drumstick turducken short ribs, brisket meatloaf ham hock shankle andouille corned beef strip steak. Venison ham bresaola strip steak. Pork belly ribeye prosciutto t-bone."
+- name: wasabi
+  descr: "I’ve had my share of trouble getting started with building Distributed apps (Dapps) on Ethereum. There are a bunch of frameworks out there like this and this that help get started immediately. But these frameworks did way too much by themselves. I wanted to understand every step involved in deploying contracts, generating their ABIs, and using them in Dapps through JSON RPC. This prompted me to build `wasabi`"
   image: pong.png
-  github: https://github.com/renyuanz/leonids
+  github: https://github.com/hexeight/wasabi
